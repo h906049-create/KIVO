@@ -1,0 +1,1238 @@
+/* =========================================================
+   KIVO — STYLE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08080d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #a970ff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaaab5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+
+    background: #8b5cf6;
+
+    padding: 11px 18px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    background: #996df7;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    max-width: 1200px;
+    min-height: 720px;
+
+    margin: auto;
+    padding: 100px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: #8b5cf6;
+
+    opacity: 0.07;
+
+    filter: blur(140px);
+
+    top: 50px;
+    left: 100px;
+
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 650px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border: 1px solid #2b2933;
+    background: #111117;
+
+    border-radius: 20px;
+
+    color: #aaa8b5;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 28px;
+}
+
+.status span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #63e6be;
+
+    box-shadow: 0 0 10px #63e6be;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 6.5vw, 82px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #a970ff;
+
+    text-shadow: 0 0 40px rgba(169, 112, 255, 0.2);
+}
+
+.hero-content > p {
+    color: #9695a2;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 570px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.hero-meta {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #202029;
+}
+
+.hero-meta div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.hero-meta strong {
+    font-size: 12px;
+
+    color: #dddde5;
+}
+
+.hero-meta span {
+    color: #62626d;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   KIVO CONTROL PANEL
+========================================================= */
+
+.hero-panel {
+    width: 390px;
+
+    flex-shrink: 0;
+
+    background: rgba(15, 15, 22, 0.92);
+
+    border: 1px solid #2a2934;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 1;
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.45),
+        0 0 70px rgba(139, 92, 246, 0.06);
+}
+
+.panel-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #24232d;
+}
+
+.panel-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.panel-logo {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #8b5cf6;
+
+    color: white;
+
+    font-weight: 800;
+
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.25);
+}
+
+.panel-brand strong {
+    display: block;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.panel-brand small {
+    display: block;
+
+    color: #5e5d68;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.panel-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 9px;
+
+    color: #777681;
+
+    letter-spacing: 1px;
+}
+
+.panel-status span {
+    width: 6px;
+    height: 6px;
+
+    background: #63e6be;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 8px #63e6be;
+}
+
+
+/* =========================================================
+   PANEL MAIN
+========================================================= */
+
+.panel-main {
+    text-align: center;
+
+    padding: 50px 30px 40px;
+}
+
+.kivo-symbol {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    background: #17141e;
+
+    border: 1px solid #3b2c50;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 35px rgba(139, 92, 246, 0.08);
+}
+
+.panel-main h2 {
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.panel-main p {
+    color: #696874;
+
+    font-size: 12px;
+
+    max-width: 240px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   PANEL STATS
+========================================================= */
+
+.panel-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #24232d;
+    border-bottom: 1px solid #24232d;
+}
+
+.panel-stat {
+    padding: 18px 12px;
+
+    text-align: center;
+
+    border-right: 1px solid #24232d;
+}
+
+.panel-stat:last-child {
+    border-right: none;
+}
+
+.panel-stat span {
+    display: block;
+
+    color: #575660;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.panel-stat strong {
+    font-size: 10px;
+
+    color: #b7b6c0;
+}
+
+
+/* =========================================================
+   TERMINAL
+========================================================= */
+
+.panel-terminal {
+    padding: 20px;
+
+    background: #0b0b10;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    line-height: 2;
+}
+
+.terminal-line {
+    color: #55545f;
+}
+
+.terminal-line span {
+    color: #8b5cf6;
+
+    margin-right: 5px;
+}
+
+.terminal-line.success {
+    color: #777681;
+}
+
+.terminal-line.success span {
+    color: #63e6be;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 14px 22px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #8b5cf6;
+    color: white;
+}
+
+.secondary-button {
+    border: 1px solid #292934;
+    color: white;
+}
+
+.primary-button:hover {
+    opacity: 0.85;
+
+    transform: translateY(-2px);
+}
+
+.secondary-button:hover {
+    background: #12121a;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.features,
+.roadmap {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 120px 30px;
+}
+
+.section-title {
+    max-width: 650px;
+
+    margin-bottom: 60px;
+}
+
+.section-title span,
+.section-label {
+    color: #a970ff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2,
+.beta h2 {
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    margin: 15px 0;
+}
+
+.section-title p {
+    color: #858591;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.feature-card {
+    background: #101017;
+
+    border: 1px solid #24242d;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    user-select: none;
+}
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    background: #8b5cf6;
+
+    opacity: 0;
+
+    filter: blur(70px);
+
+    top: -80px;
+    right: -80px;
+
+    transition: 0.4s;
+
+    pointer-events: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #594171;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(139, 92, 246, 0.06);
+}
+
+.feature-card:hover::before {
+    opacity: 0.12;
+}
+
+.feature-card:active {
+    transform: translateY(-4px) scale(0.99);
+}
+
+.feature-icon {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card p {
+    color: #7d7d88;
+
+    font-size: 14px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.feature-more {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #a970ff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    opacity: 0.7;
+
+    transition: 0.3s;
+
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card:hover .feature-more {
+    opacity: 1;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   FEATURE MODAL
+========================================================= */
+
+.feature-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.feature-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* FUNDO DO MODAL */
+
+.modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    cursor: pointer;
+}
+
+
+/* MODAL */
+
+.modal {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 40px;
+
+    background: #101017;
+
+    border: 1px solid #34313f;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    z-index: 1;
+
+    transform: translateY(20px) scale(0.97);
+
+    transition: transform 0.3s ease;
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.6),
+        0 0 80px rgba(139, 92, 246, 0.08);
+}
+
+.feature-modal.active .modal {
+    transform: translateY(0) scale(1);
+}
+
+
+/* BOTÃO FECHAR */
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #292832;
+
+    background: #17171f;
+
+    color: #85838f;
+
+    border-radius: 8px;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    color: white;
+
+    background: #22212b;
+
+    border-color: #49375e;
+}
+
+
+/* ÍCONE */
+
+.modal-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #19151f;
+
+    border: 1px solid #3a2b4e;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.08);
+}
+
+
+/* TEXTOS */
+
+.modal-label {
+    color: #a970ff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.modal h2 {
+    font-size: 32px;
+
+    margin: 8px 0 12px;
+}
+
+.modal > p {
+    color: #85838f;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* LISTA */
+
+.modal-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.modal-feature {
+    padding: 12px 14px;
+
+    background: #15151d;
+
+    border: 1px solid #24232d;
+
+    border-radius: 8px;
+
+    color: #aaa8b5;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.modal-feature:hover {
+    border-color: #49375e;
+
+    background: #181720;
+}
+
+.modal-feature::before {
+    content: "✓";
+
+    color: #a970ff;
+
+    margin-right: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BETA
+========================================================= */
+
+.beta {
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    padding: 90px 70px;
+
+    background: #111019;
+
+    border: 1px solid #292334;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.beta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: #8b5cf6;
+
+    opacity: 0.08;
+
+    filter: blur(100px);
+
+    right: -100px;
+    top: -100px;
+
+    pointer-events: none;
+}
+
+.beta-content {
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.beta p {
+    color: #888893;
+
+    margin: 20px 0 30px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.roadmap-item {
+    display: grid;
+
+    grid-template-columns: 70px 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border: 1px solid #24242d;
+
+    background: #101017;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.roadmap-item:hover {
+    border-color: #40314f;
+
+    transform: translateX(4px);
+}
+
+.roadmap-number {
+    color: #676772;
+
+    font-size: 14px;
+}
+
+.roadmap-item p {
+    color: #777782;
+
+    font-size: 14px;
+}
+
+.roadmap-status {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #666672;
+}
+
+.roadmap-item.active {
+    border-color: #49375e;
+}
+
+.roadmap-item.active .roadmap-status {
+    color: #a970ff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    border-top: 1px solid #1d1d25;
+
+    text-align: center;
+
+    padding: 70px 30px 50px;
+
+    margin-top: 40px;
+
+    background: #07070b;
+
+    color: #666672;
+
+    position: relative;
+}
+
+.footer-logo {
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color: #666672;
+
+    font-size: 12px;
+}
+
+.footer-info {
+    margin: 20px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 11px;
+}
+
+.copyright {
+    font-size: 11px;
+
+    color: #4f4f59;
+}
+
+
+/* =========================================================
+   RESPONSIVO — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 70px;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-panel {
+        width: 100%;
+        max-width: 390px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .hero-meta {
+        justify-content: center;
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .features,
+    .roadmap {
+        padding: 80px 20px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2,
+    .beta h2 {
+        font-size: 35px;
+    }
+
+    .beta {
+        margin: 20px;
+
+        padding: 60px 30px;
+    }
+
+    .roadmap-item {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .roadmap-status {
+        display: none;
+    }
+
+    .modal {
+        padding: 30px 25px;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+    }
+
+    .modal h2 {
+        font-size: 27px;
+    }
+
+    .modal-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 27px;
+    }
+
+}
